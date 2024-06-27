@@ -4,6 +4,7 @@ export default class Building {
       throw new Error('Invalid argument type');
     }
     this._sqft = sqft;
+    this.evacuationWarningMessage();
   }
 
   get sqft() {
