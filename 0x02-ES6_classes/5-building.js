@@ -4,7 +4,6 @@ export default class Building {
       throw new Error('Invalid argument type');
     }
     this._sqft = sqft;
-    this.evacuationWarningMessage();
   }
 
   get sqft() {
@@ -19,6 +18,6 @@ export default class Building {
   }
 
   static evacuationWarningMessage() {
-    if (this.constructor.name !== 'Building') throw new Error('Class extending Building must override evacuationWarningMessage');
+    throw new Error('Class extending Building must override evacuationWarningMessage');
   }
 }
