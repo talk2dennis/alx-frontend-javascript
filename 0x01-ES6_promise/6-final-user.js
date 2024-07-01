@@ -6,7 +6,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
   const results = [];
   return Promise.allSettled(myPromise).then((result) => {
     result.map((res) => (
-      result.push({
+      results.push({
         status: res.status,
         value: res.status === 'rejected' ? String(res.reason) : res.value,
       })
