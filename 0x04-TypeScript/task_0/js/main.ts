@@ -25,7 +25,7 @@ function renderTable(students: Student[]): void {
   const table = document.createElement('table');
   const tbody = document.createElement('tbody');
 
-  students.map((student) => {
+  students.forEach((student) => {
     const tr = document.createElement('tr');
     const tdStudent = document.createElement('td');
     const tdLocation = document.createElement('td');
