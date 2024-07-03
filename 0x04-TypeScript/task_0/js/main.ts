@@ -26,11 +26,13 @@ function renderTable(students: Student[]): void {
   const tbody = document.createElement('tbody');
 
   students.map((student) => {
-    const tr = document.createElement('row');
+    const tr = document.createElement('tr');
     const tdStudent = document.createElement('td');
     const tdLocation = document.createElement('td');
     tdLocation.style.border = '1px solid black';
     tdStudent.style.border = '1px solid black';
+    tdStudent.style.padding = '10px';
+    tdLocation.style.padding = '10px';
     tdStudent.textContent = student.firstName;
     tdLocation.textContent = student.location;
     tr.appendChild(tdStudent);
